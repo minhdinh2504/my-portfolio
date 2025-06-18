@@ -25,7 +25,7 @@ export const projectList = [
 ]
 
 export const typewriterTexts = [
-    'A full-stack developer.',
+    'On the way to become a Full-Stack Web Developer',
     'Passionate about web performance.',
     'Crafting modern, scalable UI.',
 ]
