@@ -51,21 +51,23 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="md:hidden relative flex items-center space-x-2">
-          <ThemeToggle />
-          <button
-            ref={buttonRef}
-            onClick={() => setOpen(prev => !prev)}
-            aria-label="Toggle menu"
-          >
-            <FontAwesomeIcon icon={faBars} className="w-6 h-6" />
-          </button>
+        <div className="md:hidden relative">
+          <div className="flex items-center space-x-2">
+            <ThemeToggle />
+            <button
+              ref={buttonRef}
+              onClick={() => setOpen(prev => !prev)}
+              aria-label="Toggle menu"
+            >
+              <FontAwesomeIcon icon={faBars} className="w-6 h-6" />
+            </button>
+          </div>
 
           {/* Dropdown menu */}
           {open && (
             <div
               ref={menuRef}
-              className="absolute right-0 mt-3.5 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
+              className="absolute right-0 top-full mt-3 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
             >
               <ul className="flex flex-col">
                 {navItems.map(({ href, label }) => (
